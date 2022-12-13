@@ -77,7 +77,7 @@ class _StudentPageState extends State<StudentPage> {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 231, 121, 198), Color.fromARGB(255, 134, 67, 160)])),
+                  colors: [Color.fromARGB(0, 0, 0, 0), Color.fromARGB(25, 134, 67, 160)])),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -86,15 +86,15 @@ class _StudentPageState extends State<StudentPage> {
                   height: 15,
                 ),
                 CircleAvatar(
-                  radius: 45.0,
+                  radius: 55.0,
                   backgroundColor: Colors.black,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('images/logo.png'),
-                    radius: 43,
+                    backgroundImage: AssetImage('images/login.gif'),
+                    radius: 53,
                   ),
                 ),
                 Text(
-                  'Queuing Management',
+                  'Student Login',
                   style: TextStyle(
                     fontSize: 26.0,
                     color: Colors.black,
@@ -132,17 +132,17 @@ class _StudentPageState extends State<StudentPage> {
                         border: InputBorder.none,
                         hintText: 'Enter Student ID',
                         hintStyle: const TextStyle(
-                            color: Colors.white60, fontSize: 18),
+                            color: Colors.deepPurpleAccent, fontSize: 18),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
                             borderSide:
-                            const BorderSide(color: Colors.white38)),
+                            const BorderSide(color: Colors.purple)),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
                             borderSide:
-                            const BorderSide(color: Colors.white70))),
+                            const BorderSide(color: Colors.purple))),
                   ),
                 ),
                 const SizedBox(
@@ -182,7 +182,7 @@ class _StudentPageState extends State<StudentPage> {
                         border: InputBorder.none,
                         hintText: 'Enter Password',
                         hintStyle: const TextStyle(
-                            color: Colors.white60, fontSize: 18),
+                            color: Colors.deepPurpleAccent, fontSize: 18),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
@@ -192,7 +192,7 @@ class _StudentPageState extends State<StudentPage> {
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
                             borderSide:
-                            const BorderSide(color: Colors.white70))),
+                            const BorderSide(color: Colors.purple))),
                   ),
                 ),
                 const SizedBox(
@@ -217,8 +217,8 @@ class _StudentPageState extends State<StudentPage> {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Colors.purple.shade600,
-                          Colors.amber.shade900
+                          Colors.deepPurpleAccent,
+                          Colors.deepPurple
                         ])),
                     child: Text('Login',
                         style: TextStyle(

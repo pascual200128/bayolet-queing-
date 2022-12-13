@@ -20,7 +20,7 @@ class DashBoard extends StatelessWidget {
               children: <Widget>[
                 CircleAvatar(
                   radius: 70.0,
-                  backgroundImage: AssetImage('images/logo.png'),
+                  backgroundImage: AssetImage('images/philcst.png'),
                 ),
                 MaterialButton(
                   padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
@@ -42,7 +42,7 @@ class DashBoard extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
-                        color: Color.fromARGB(255, 248, 248, 248)),
+                        color: Color.fromARGB(25, 28, 28, 28)),
                   ),
                 ),
                 MaterialButton(
@@ -65,7 +65,7 @@ class DashBoard extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
-                        color: Color.fromARGB(255, 248, 248, 248)),
+                        color: Color.fromARGB(25, 28, 28, 28)),
                   ),
                 ),
               ],

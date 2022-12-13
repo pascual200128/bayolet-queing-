@@ -16,7 +16,7 @@ class Transactions extends StatelessWidget {
           alignment: Alignment.center,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 163, 147, 170), Color.fromARGB(255, 84, 3, 184)])),
+                  colors: [Color.fromARGB(25, 16, 17, 10), Color.fromARGB(255, 84, 3, 184)])),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -98,8 +98,8 @@ class Transactions extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: const LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(255, 10, 13, 150),
+                          Color.fromARGB(25, 165, 15, 17)
                         ])),
                     child: Text('Registrar',
                         style: TextStyle(

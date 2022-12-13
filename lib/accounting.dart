@@ -14,7 +14,7 @@ class Accounting extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 136, 109, 148), Color.fromARGB(255, 84, 3, 184)])),
+                  colors: [Color.fromARGB(25, 16, 109, 18), Color.fromARGB(255, 84, 3, 184)])),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -56,8 +56,8 @@ class Accounting extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(25, 120, 13, 10),
+                          Color.fromARGB(25, 165, 15, 17)
                         ])),
                     child: Text('Tuition Fee',
                         style: TextStyle(
@@ -89,8 +89,8 @@ class Accounting extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(25, 120, 13, 10),
+                          Color.fromARGB(25, 165, 15, 17)
                         ])),
                     child: Text('Enrollment Fee',
                         style: TextStyle(
@@ -121,8 +121,8 @@ class Accounting extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(255, 10, 13, 10),
+                          Color.fromARGB(255, 15, 155, 17)
                         ])),
                     child: Text('TES',
                         style: TextStyle(

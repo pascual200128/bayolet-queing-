@@ -14,7 +14,7 @@ class Registrar extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 136, 109, 148), Color.fromARGB(255, 84, 3, 184)])),
+                  colors: [Color.fromARGB(25, 136, 19, 14), Color.fromARGB(255, 84, 3, 184)])),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -56,8 +56,8 @@ class Registrar extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(25, 10, 13, 150),
+                          Color.fromARGB(25, 165, 15, 17)
                         ])),
                     child: Text('Registration Form',
                         style: TextStyle(
@@ -89,8 +89,8 @@ class Registrar extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(25, 10, 13, 150),
+                          Color.fromARGB(25, 15, 155, 17)
                         ])),
                     child: Text('Permit',
                         style: TextStyle(
@@ -121,8 +121,8 @@ class Registrar extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 120, 13, 150),
-                          Color.fromARGB(255, 165, 155, 147)
+                          Color.fromARGB(25, 120, 13, 150),
+                          Color.fromARGB(25, 15, 15, 17)
                         ])),
                     child: Text('Grades',
                         style: TextStyle(
