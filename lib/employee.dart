@@ -1,7 +1,9 @@
+//@dart=2.9
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
+import 'package:http/http.dart' as http;
 import 'dashboard.dart';
 
 void main() {
@@ -9,12 +11,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Queuing Management',
+      title: 'Queuing Application',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class EmployeePage extends StatefulWidget {
-  const EmployeePage({Key? key}) : super(key: key);
+  const EmployeePage({key}) : super(key: key);
 
   @override
   _EmployeePageState createState() => _EmployeePageState();
@@ -36,8 +38,7 @@ class _EmployeePageState extends State<EmployeePage> {
   TextEditingController pass = TextEditingController();
 
   Future login() async {
-    var url = Uri.http("", '/login/employee.php', {'q': '{http}'});
-    var http;
+    var url ="http://192.168.1.24/login/employee.php";
     var response = await http.post(url, body: {
       "username": user.text,
       "password": pass.text,
@@ -61,7 +62,7 @@ class _EmployeePageState extends State<EmployeePage> {
       Fluttertoast.showToast(
         backgroundColor: Colors.red,
         textColor: Colors.white,
-        msg: 'Username and password invalid',
+        msg: 'Invalid',
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -78,7 +79,7 @@ class _EmployeePageState extends State<EmployeePage> {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 231, 121, 198), Color.fromARGB(255, 134, 67, 160)])),
+                  colors: [Color.fromARGB(55, 31, 11, 128), Color.fromARGB(25, 14, 67, 10)])),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -87,20 +88,19 @@ class _EmployeePageState extends State<EmployeePage> {
                   height: 15,
                 ),
                 CircleAvatar(
-                  radius: 45.0,
-                  backgroundColor: Colors.black,
+                  radius: 50.0,
+                  backgroundColor: Colors.deepPurple,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('images/logo.png'),
+                    backgroundImage: AssetImage('images/login.gif'),
                     radius: 43,
                   ),
                 ),
                 Text(
-                  'Queuing Management',
+                  'Login Here',
                   style: TextStyle(
                     fontSize: 26.0,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Times New Roman',
                   ),
                 ),
                 SizedBox(
@@ -121,19 +121,19 @@ class _EmployeePageState extends State<EmployeePage> {
                       .copyWith(bottom: 10),
                   child: TextField(
                     controller: user,
-                    style: const TextStyle(color: Colors.white, fontSize: 14.5),
+                    style: const TextStyle(color: Colors.black, fontSize: 14.5),
                     decoration: InputDecoration(
                         prefixIconConstraints:
                         const BoxConstraints(minWidth: 45),
                         prefixIcon: const Icon(
                           Icons.email_outlined,
-                          color: Colors.white70,
+                          color: Colors.black,
                           size: 22,
                         ),
                         border: InputBorder.none,
                         hintText: 'Enter Employee ID',
                         hintStyle: const TextStyle(
-                            color: Colors.white60, fontSize: 18),
+                            color: Colors.purple, fontSize: 18),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
@@ -143,7 +143,7 @@ class _EmployeePageState extends State<EmployeePage> {
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
                             borderSide:
-                            const BorderSide(color: Colors.white70))),
+                            const BorderSide(color: Colors.purple))),
                   ),
                 ),
                 const SizedBox(
@@ -161,7 +161,7 @@ class _EmployeePageState extends State<EmployeePage> {
                         const BoxConstraints(minWidth: 45),
                         prefixIcon: const Icon(
                           Icons.lock,
-                          color: Colors.white70,
+                          color: Colors.black,
                           size: 22,
                         ),
                         suffixIconConstraints:
@@ -183,7 +183,7 @@ class _EmployeePageState extends State<EmployeePage> {
                         border: InputBorder.none,
                         hintText: 'Enter Password',
                         hintStyle: const TextStyle(
-                            color: Colors.white60, fontSize: 18),
+                            color: Colors.purple, fontSize: 18),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
@@ -193,7 +193,7 @@ class _EmployeePageState extends State<EmployeePage> {
                             borderRadius: BorderRadius.circular(100).copyWith(
                                 bottomRight: const Radius.circular(0)),
                             borderSide:
-                            const BorderSide(color: Colors.white70))),
+                            const BorderSide(color: Colors.purple))),
                   ),
                 ),
                 const SizedBox(
@@ -218,14 +218,18 @@ class _EmployeePageState extends State<EmployeePage> {
                         borderRadius: BorderRadius.circular(100)
                             .copyWith(bottomRight: const Radius.circular(0)),
                         gradient: LinearGradient(colors: [
-                          Colors.purple.shade600,
-                          Colors.amber.shade900
+                          Colors.deepPurpleAccent,
+                          Colors.deepPurple
                         ])),
                     child: Text('Login',
                         style: TextStyle(
                             color: Colors.white.withOpacity(.8),
                             fontSize: 20,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.bold),
+                    ),
+
+
+
                   ),
                 ),
               ],

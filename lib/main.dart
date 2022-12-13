@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color.fromARGB(255, 158, 111, 170),
+      backgroundColor: Color.fromARGB(25, 15, 111, 170),
       body: SafeArea(
         child: Container(
           constraints: BoxConstraints.expand(),
@@ -44,8 +44,17 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(padding: EdgeInsets.only(top: 150)),
+
+                  CircleAvatar(
+                    radius: 100.0,
+                    backgroundColor: Colors.deepPurple,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('images/philcst.jpg'),
+                      radius: 96,
+                    ),
+                  ),
                   Text(
-                    "Welcome to Queuing Management",
+                    "PhilCST Queuing App",
                     style: TextStyle(
                         fontFamily: 'Orpheus',
                         color: Colors.black,
@@ -65,17 +74,17 @@ class HomePage extends StatelessWidget {
                             builder: (context) => const EmployeePage()),
                       );
                     },
-                    color: Color.fromARGB(255, 179, 74, 42),
+                    color: Color.fromARGB(101, 14, 174, 42),
                     shape: RoundedRectangleBorder(
                         side: BorderSide(
                           color: Colors.black,
                         ),
                         borderRadius: BorderRadius.circular(40)),
                     child: Text(
-                      "Employee",
+                      "Staff",
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 16,
+                          fontSize: 26,
                           color: Color.fromARGB(255, 248, 248, 248)),
                     ),
                   ),
@@ -100,7 +109,7 @@ class HomePage extends StatelessWidget {
                       "Student",
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 16,
+                          fontSize: 26,
                           color: Colors.white),
                     ),
                   ),
